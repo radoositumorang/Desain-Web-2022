@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style> 
+        .highlight{
+            background:yellow;
+            color: red;
+            font-weight: bold;
+        }
+
+
+        .teks{
+            font-size: 20px;
+        }
+
+        button{
+            margin-top: 30px;
+        }
+    </style>
+  </head>
+  <body>
+      <div class="teks">
+      <h1>PTIK FKIP UNS</h1>
+
+       The 
+       <span class="blue_3">Faculty of Teacher Training and Education</span>,<span class="blue_3">Sebelas Maret University</span>, Surakarta is an 
+       <span class="blue_5">Educational Personnel Education Institution (LPTK)</span> which has 24 study programs in 6 majors. Each study program has its own characteristics in producing 
+        <span class="blue_4">superior, strong and intelligent educational staff.</span>
+        <br> <br> 
+        The <span class="red_3">Informatics and Computer Technology Education (PTIK)</span> tudy program is planned to take shelter in the management of the  
+        <span  class="blue_1">Engineering and Vocational Education (PTK)</span> department. This placement revises our previous statement, where the PTIK study program is under the P.MIPA department. PTIK is a study program that will produce graduates who are
+        <span class="red_4">prioritized to teach in vocational/vocational programs.</span> 
+        So, it would be better if PTIK was under the PTK department which oversees vocational programs such as<span class="red_4">Building Engineering Education,</span>and
+        <span  class="blue_3">Mechanical Engineering Education </span>To meet the needs of lecturers in the field of information technology that cannot be met by the PTK department, PTIK will conduct
+        <span class="red_1">resource sharing with the mathematics study program</span>
+        </div>
+        
+        <button id="button">Highlight Paragraf</button>
+
+        <script>
+            document.getElementById("button").addEventListener("click", 
+            function() {
+              [].forEach.call(document.querySelectorAll("span"), p => {
+              p.classList.toggle("highlight");
+            });
+              this.innerHTML = (this.innerHTML === "Highlight Paragraf") ? "Unhighlight Paragraf" : "Highlight Paragraf";
+            })
+        </script>
+      </body>
+  </body>
+</html>

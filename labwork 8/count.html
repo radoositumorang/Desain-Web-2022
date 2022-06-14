@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css"
+    />
+  </head>
+  <body>
+    <script src="jquery.js"></script>
+    <script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+    <center>
+      <div class="col3">
+        <h2>Penghitung Karakter</h2>
+        Limit 50 characters.<br /><br />
+        <textarea cols="36" rows="5" id="giftmsg"></textarea>
+        <div id="textleft">0</div>
+        <div id="bar"></div>
+      </div>
+    </center>
+    <script>
+      $(document).ready(function () {
+        $("#giftmsg").keypress(function (event) {
+          var max = 50;
+          var len = $(this).val().length;
+
+          if (event.which < 0x20) {
+            return;
+          }
+
+          if (len >= max) {
+            event.preventDefault();
+          }
+        });
+
+        $("#giftmsg").keyup(function (event) {
+          var max = 0;
+          var len = $(this).val().length;
+          var char = len + max;
+
+          $("#textleft").text(char);
+          $("#bar").progressbar;
+          value: (0 + len) * 2;
+        });
+      });
+    </script>
+  </body>
+</html>
